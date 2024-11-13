@@ -4,7 +4,7 @@ import { Sparkles, Award, Lightbulb, Wine } from 'lucide-react';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const HomePage = () => {
-    // Créer des constantes pour les images optimisées
+    
     const IMAGES = {
         hero: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&q=80&w=1920",
         features: "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?auto=format&q=80&w=1920",
@@ -13,7 +13,6 @@ const HomePage = () => {
         newsletter: "https://images.unsplash.com/photo-1604147706283-d7119b5b822c?auto=format&q=80&w=1920"
     };
 
-    // Précharger les images
     const preloadImages = () => {
         Object.values(IMAGES).forEach(src => {
             const img = new Image();
@@ -21,7 +20,6 @@ const HomePage = () => {
         });
     };
 
-    // Utiliser React.lazy pour les composants
     const CocktailDuMoment = React.lazy(() => import('../components/CocktailDuMoment'));
     const RandomCocktail = React.lazy(() => import('../components/RandomCocktail'));
 
@@ -31,7 +29,6 @@ const HomePage = () => {
 
     return (
         <div className="min-h-screen">
-            {/* Hero Section */}
             <div
                 className="relative min-h-screen bg-cover bg-center"
                 style={{ backgroundImage: `url(${IMAGES.hero})` }}
@@ -64,7 +61,6 @@ const HomePage = () => {
             </div>
 
             <Suspense fallback={<LoadingSpinner />}>
-                {/* Section Caractéristiques */}
                 <section
                     className="relative py-20"
                     style={{ backgroundImage: `url(${IMAGES.features})` }}
@@ -103,8 +99,6 @@ const HomePage = () => {
                         </div>
                     </div>
                 </section>
-
-                {/* Section Cocktails du Moment */}
                 <section
                     className="relative py-20"
                     style={{ backgroundImage: `url(${IMAGES.moment})` }}
@@ -119,8 +113,6 @@ const HomePage = () => {
                         </Suspense>
                     </div>
                 </section>
-
-                {/* Section Découverte */}
                 <div className="relative py-20" style={{ backgroundImage: `url(${IMAGES.discover})` }}>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-blue-900/90"></div>
                     <div className="relative z-10 container mx-auto px-4">
@@ -138,8 +130,6 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Section Catégories */}
                 <div className="relative py-20 bg-white">
                     <div className="container mx-auto px-4">
                         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800 font-display">
@@ -168,8 +158,6 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Section Newsletter */}
                 <div
                     className="relative py-20"
                     style={{

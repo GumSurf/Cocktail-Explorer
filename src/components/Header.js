@@ -53,9 +53,9 @@ const Header = () => {
 
     const handleBackgroundClick = (event) => {
         if (event.target === event.currentTarget) {
-          setIsModalOpen(false);
+            setIsModalOpen(false);
         }
-      };
+    };
 
     useEffect(() => {
         const handleScroll = () => {

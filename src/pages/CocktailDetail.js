@@ -26,7 +26,6 @@ const CocktailDetails = () => {
         loadCocktailDetails();
     }, [id]);
 
-    // Fonction pour extraire les ingrédients et mesures
     const getIngredients = (cocktail) => {
         const ingredients = [];
         for (let i = 1; i <= 15; i++) {
@@ -67,7 +66,6 @@ const CocktailDetails = () => {
         <div className="min-h-screen bg-gradient-to-br from-purple-900 to-blue-900 py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden shadow-2xl">
-                    {/* En-tête du cocktail avec image en hero */}
                     <div className="relative">
                         <div className="aspect-video w-full overflow-hidden">
                             <img
@@ -77,8 +75,6 @@ const CocktailDetails = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                         </div>
-
-                        {/* Informations principales superposées */}
                         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-display">
                                 {cocktail.strDrink}
@@ -103,10 +99,7 @@ const CocktailDetails = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Contenu principal */}
                     <div className="p-8">
-                        {/* Ingrédients */}
                         <section className="mb-12">
                             <h2 className="text-2xl font-bold text-white mb-6 font-display">Ingrédients</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -135,8 +128,6 @@ const CocktailDetails = () => {
                                 ))}
                             </div>
                         </section>
-
-                        {/* Instructions */}
                         <section className="mb-12">
                             <h2 className="text-2xl font-bold text-white mb-6 font-display">Instructions</h2>
                             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
@@ -145,8 +136,6 @@ const CocktailDetails = () => {
                                 </p>
                             </div>
                         </section>
-
-                        {/* Instructions en français si disponibles */}
                         {cocktail.strInstructionsFR && (
                             <section className="mb-12">
                                 <h2 className="text-2xl font-bold text-white mb-6 font-display">Instructions en Français</h2>
@@ -157,8 +146,6 @@ const CocktailDetails = () => {
                                 </div>
                             </section>
                         )}
-
-                        {/* Tags */}
                         {cocktail.strTags && (
                             <section className="mt-8">
                                 <div className="flex items-center gap-4 flex-wrap">

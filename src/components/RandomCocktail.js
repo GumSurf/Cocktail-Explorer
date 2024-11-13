@@ -40,14 +40,14 @@ const RandomCocktail = () => {
     }
 
     return (
-        <Link 
+        <Link
             to={`/cocktail/i/${cocktail.idDrink}`}
             className="block group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
         >
             <div className="relative aspect-[3/4] overflow-hidden">
-                <img 
-                    src={cocktail.strDrinkThumb} 
-                    alt={cocktail.strDrink} 
+                <img
+                    src={cocktail.strDrinkThumb}
+                    alt={cocktail.strDrink}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>

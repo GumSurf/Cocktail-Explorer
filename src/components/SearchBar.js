@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { fetchCocktails } from '../services/cocktailService';
 import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ selectedValues, onResultsChange, onParamChange, onClose }) => {
+const SearchBar = ({ onClose }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [cocktail, setCocktail] = useState('');
     const [searchType, setSearchType] = useState('full');
     const navigate = useNavigate();
 
@@ -17,15 +16,15 @@ const SearchBar = ({ selectedValues, onResultsChange, onParamChange, onClose }) 
                 ingredients: 'i'
             };
 
-            const searchParam = searchMapping[searchType]; // Use searchType pour les filtres
+            const searchParam = searchMapping[searchType];
 
             const results = await fetchCocktails(searchParam, searchTerm);
-            navigate('/search-result', { 
+            navigate('/search-result', {
                 state: { results: results }
             });
 
             if (onClose) {
-                onClose(); // Ferme la modal après la recherche
+                onClose();
             }
 
         } catch (error) {
