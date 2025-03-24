@@ -73,11 +73,6 @@ const Header = () => {
             <div className="hidden md:block container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
                     <Link to="/" className="flex items-center space-x-4 group">
-                        <img
-                            src={logo}
-                            alt="Cocktail Explorer Logo"
-                            className="h-12 md:h-14 transition-transform duration-300 group-hover:scale-105"
-                        />
                         <div className="hidden sm:block">
                             <h1 className="text-xl md:text-2xl font-display font-bold">
                                 Cocktail Explorer
@@ -174,12 +169,7 @@ const Header = () => {
             <nav class="md:hidden">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link to="/" className="flex items-center space-x-4 group">
-                        <img
-                            src={logo}
-                            alt="Cocktail Explorer Logo"
-                            className="h-12 md:h-14 transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="hidden sm:block">
+                        <div>
                             <h1 className="text-xl md:text-2xl font-display font-bold">
                                 Cocktail Explorer
                             </h1>
